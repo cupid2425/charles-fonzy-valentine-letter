@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Valentine's Letter</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+      integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+      crossorigin="anonymous"></script>
+   <link rel="shortcut icon" href="fav.ico" type="image/x-icon">
+   <style>
+      .btn-no {
+         transition: all 0.5s;
+      }
+   </style>
+</head>
+
+<body style="background-color: #fdfafa;">
+   <div class="container">
+      <div class="row" style="display: flex;justify-content: center;align-items:center;">
+         <div class="col-sm-3"></div>
+         <div class="col-sm-6 mt-5">
+            <h3 style="display: flex;justify-content: center;" class="mb-5 val">Happy Valentine's Day!</h3>
+            <div class="card content" style="display: none;">
+               <div class="card-body text-justify ml-3 mr-3 mb-3">
+                  <h5 class="mt-2 text-center mb-4">My Letter For You...</h5>
+                  <p class="mt-2">Dear <b>Riza</b>,</p>
+
+                  <p style="text-indent: 20px;">I hope this message finds you well. I've been thinking a lot about us and wanted to say sorry for the way things went down. I know it got messed up, and I messed up.</p>
+
+                  <p style="text-indent: 20px;">I never meant to disappear on you; it wasn't my plan. I wish I could go back and be more clear about what was going on in my head. Looking back, I see I was scared and confused about my feelings.</p>
+
+                  <p style="text-indent: 20px;">I hope you can forgive me for all the confusion and maybe give us another shot. I still like you a lot, and I regret how things turned out. I wish we could talk about it and start fresh.</p>
+
+                  <p style="text-indent: 20px;">Wishing you all the best, and hoping to hear from you soon.</p><br />
+
+                  <p>Sincerely,</p>
+                  <p><b>Charles Fonzy C. Varquez</b></p>
+               </div>
+            </div>
+            <a href="#" style="display: flex;justify-content: center;align-items:center;">
+               <img src="bear.png" class="bear" width="80px">
+               <img src="fav.ico" class="heart mb-5" style="display: none;" width="50px">
+            </a>
+            <label class="txt mt-2" style="display: flex;justify-content: center;">Please click the bear!</label>
+         </div>
+         <div class="col-sm-3"></div>
+      </div>
+   </div>
+
+   <script>
+      $(document).ready(function () {
+         var correctName ="Riza";
+
+         $(".bear").click(function () {
+            var enteredName = prompt("Enter the name to unlock the letter:");
+
+            if (enteredName === correctName) {
+               $(".content").slideDown();
+               $(".bear").hide();
+               $(".txt").hide();
+               $(".heart").show();
+               $(".form").show();
+               $(".val").hide();
+            } else {
+               alert("Incorrect name. Access denied!");
+            }
+         });
+
+         $(".heart").click(function () {
+            $(".content").slideUp();
+            $(".heart").hide();
+            $(".form").hide();
+            $(".bear").show();
+            $(".txt").show();
+            $(".val").fadeIn();
+         });
+      });
+   </script>
+</body>
+
+</html>
