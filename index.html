@@ -54,7 +54,7 @@
          var correctName ="Riza";
 
          $(".heart").click(function () {
-            var enteredName = prompt("Enter the password to unlock the letter:");
+            var enteredName = prompt("Enter your Name to unlock the letter:");
             
             if (enteredName === correctName) {
                $(".content").slideDown();
@@ -64,7 +64,7 @@
                $(".form").show();
                $(".val").hide();
             } else {
-               alert("Incorrect password. Access denied!");
+               alert("Access denied!");
             }
          });
 
