@@ -53,21 +53,21 @@
 
    <script>
       $(document).ready(function () {
-         //var correctName ="Riza";
+         var correctName ="Riza";
 
          $(".heart").click(function () {
-            //var enteredName = prompt("Enter the name to unlock the letter:");
+            var enteredName = prompt("Enter the password to unlock the letter:");
             
-            //if (enteredName === correctName) {
+            if (enteredName === correctName) {
                $(".content").slideDown();
                $(".heart").hide();
                $(".txt").hide();
                $(".bear").show();
                $(".form").show();
                $(".val").hide();
-            //} else {
-              // alert("Incorrect name. Access denied!");
-            //}
+            } else {
+               alert("Incorrect password. Access denied!");
+            }
          });
 
          $(".bear").click(function () {
