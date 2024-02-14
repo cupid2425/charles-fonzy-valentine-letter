@@ -29,23 +29,25 @@
             <div class="card content" style="display: none;">
                <div class="card-body text-justify ml-3 mr-3 mb-3">
                   <h5 class="mt-2 text-center mb-4">My Letter For You...</h5>
-                  <p class="mt-2">Hello <b>Riza</b>,</p>
+                  <p class="mt-2">Dear <b>(Her Name)</b>,</p>
 
-                  <p style="text-indent: 20px;">Sorry ky na wala rakog kalit ja wala na nagparamdam sa imoha. Pasensya na jd ky wala ko kasabot sa akong gibati ingadto ky na stress sd kos mga buhaton ba ja daghan kaayo ko gipang huna2. Og mabalik pa lng nako ang panahon, unta mi ingon na lng ko nimo about in-ana. Sa mga niagi na adlaw na nagpalayo kos mga chat naka realize ko sa akong gibuhat na mali jd cja.</p>
+                  <p style="text-indent: 20px;">I hope this message finds you well. I've been thinking a lot about us and wanted to say sorry for the way things went down. I know it got messed up, and I messed up.</p>
 
-                  <p style="text-indent: 20px;">I hope you can forgive me, og mabalik pa ang sauna dili na jd nako utrohon na mawala lng og kalit. Naibog pa sd ko sa imoha wala pa jd nawala ni akong feelings para nimo. I wish that we could talk about it sa personal.</p>
+                  <p style="text-indent: 20px;">I never meant to disappear on you; it wasn't my plan. I wish I could go back and be more clear about what was going on in my head. Looking back, I see I was scared and confused about my feelings.</p>
 
-                  <p style="text-indent: 20px;">Wishing you all the best, maghuwat lng kos imohang reply.</p><br />
+                  <p style="text-indent: 20px;">I hope you can forgive me for all the confusion and maybe give us another shot. I still like you a lot, and I regret how things turned out. I wish we could talk about it and start fresh.</p>
+
+                  <p style="text-indent: 20px;">Wishing you all the best, and hoping to hear from you soon.</p><br />
 
                   <p>Sincerely,</p>
                   <p><b>Charles Fonzy C. Varquez</b></p>
                </div>
             </div>
             <a href="#" style="display: flex;justify-content: center;align-items:center;">
-               <img src="fav.ico" class="heart" width="50px">
-               <img src="bear.png" class="bear mb-5" style="display: none;" width="80px">
+               <img src="bear.png" class="bear" width="80px">
+               <img src="fav.ico" class="heart mb-5" style="display: none;" width="50px">
             </a>
-            <label class="txt mt-2" style="display: flex;justify-content: center;">Please click the heart!</label>
+            <label class="txt mt-2" style="display: flex;justify-content: center;">Please click the bear!</label>
          </div>
          <div class="col-sm-3"></div>
       </div>
@@ -53,28 +55,19 @@
 
    <script>
       $(document).ready(function () {
-         //var correctName ="Riza";
-
-         $(".heart").click(function () {
-            //var enteredName = prompt("Enter the name to unlock the letter:");
-            
-            //if (enteredName === correctName) {
-               $(".content").slideDown();
-               $(".heart").hide();
-               $(".txt").hide();
-               $(".bear").show();
-               $(".form").show();
-               $(".val").hide();
-            //} else {
-              // alert("Incorrect name. Access denied!");
-            //}
-         });
-
          $(".bear").click(function () {
-            $(".content").slideUp();
+            $(".content").slideDown();
             $(".bear").hide();
-            $(".form").hide();
+            $(".txt").hide();
             $(".heart").show();
+            $(".form").show();
+            $(".val").hide();
+         });
+         $(".heart").click(function () {
+            $(".content").slideUp();
+            $(".heart").hide();
+            $(".form").hide();
+            $(".bear").show();
             $(".txt").show();
             $(".val").fadeIn();
          });
